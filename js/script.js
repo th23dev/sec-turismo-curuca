@@ -27,3 +27,37 @@ if (menuToggle && navLinks) {
         }
     });
 }
+
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+function updateDarkModeIcon() {
+    if (darkModeToggle) {
+        const icon = darkModeToggle.querySelector('i');
+        if (body.classList.contains('dark')) {
+            icon.className = 'fas fa-sun';
+            darkModeToggle.classList.add('active');
+        } else {
+            icon.className = 'fas fa-moon';
+            darkModeToggle.classList.remove('active');
+        }
+    }
+}
+
+// Configurar o toggle
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark');
+        const isDark = body.classList.contains('dark');
+        localStorage.setItem('darkMode', isDark);
+        updateDarkModeIcon();
+    });
+}
+
+// Verificar se o modo dark está salvo no localStorage
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+if (isDarkMode) {
+    body.classList.add('dark');
+}
+updateDarkModeIcon();

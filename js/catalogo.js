@@ -1,7 +1,15 @@
 function openModal(rio) {
    const modalId = rio;
-   document.getElementById("modal-" + modalId).style.display = "flex";
+   const modal = document.getElementById("modal-" + modalId);
+   modal.style.display = "flex";
    updateCarousel(modalId, 0); // Inicializar visibilidade das setas
+
+   // Adicionar event listener para fechar ao clicar fora
+   modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+         closeModal(modalId);
+      }
+   });
 }
 
 function closeModal(rio) {

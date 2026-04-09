@@ -14,6 +14,23 @@
    --footer-color: #222;
 }
 
+/* Dark mode variables */
+body.dark {
+   --bg: #1a1a1a;
+   --secondary-bg: #2d2d2d;
+
+   --primary-color: #0056FF;
+   --dark-color: #0033AA;
+   --accent-color: #FFD600;
+
+   --main-text: #ffffff;
+   --text-color: #e0e0e0;
+   --text-light: #f4f4f4;
+
+   --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+   --footer-color: #333;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -83,31 +100,44 @@ section {
       margin: 0;
       padding: 0;
 
-      li a {
-         color: var(--text-light);
-         text-decoration: none;
-         font-weight: 600;
-         font-size: 0.95rem;
-         position: relative;
-         transition: color 0.3s ease;
-         text-transform: uppercase;
-         letter-spacing: 0.3px;
+      li {
+         display: flex;
+         align-items: center;
 
-         &::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease;
-         }
+         a, button {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-         &:hover {
-            color: var(--accent-color);
+            &:hover {
+               color: var(--accent-color);
+            }
 
             &::after {
+               content: '';
+               position: absolute;
+               width: 0;
+               height: 3px;
+               bottom: -5px;
+               left: 0;
+               background-color: var(--accent-color);
+               transition: width 0.3s ease;
+            }
+
+            &:hover::after {
                width: 100%;
             }
          }
@@ -174,33 +204,33 @@ section {
 }
 
 .hero-bg-1 {
-   background-image: url('../imgs/cat.webp');
+   background-image: url('../imgs/logos-bg/cat.webp');
    animation-delay: 0s;
    animation: instantFadeInOut 36s infinite;
 }
 
 .hero-bg-2 {
-   background-image: url('../imgs/praias.webp');
+   background-image: url('../imgs/logos-bg/praias.webp');
    animation-delay: 6s;
 }
 
 .hero-bg-3 {
-   background-image: url('../imgs/igarapes.webp');
+   background-image: url('../imgs/logos-bg/igarapes.webp');
    animation-delay: 12s;
 }
 
 .hero-bg-4 {
-   background-image: url('../imgs/hoteis.webp');
+   background-image: url('../imgs/logos-bg/hoteis.webp');
    animation-delay: 18s;
 }
 
 .hero-bg-5 {
-   background-image: url('../imgs/barraca_do_pescador.webp');
+   background-image: url('../imgs/logos-bg/barraca_do_pescador.webp');
    animation-delay: 24s;
 }
 
 .hero-bg-6 {
-   background-image: url('../imgs/tabua_de_mare.webp');
+   background-image: url('../imgs/logos-bg/tabua_de_mare.webp');
    animation-delay: 30s;
 }
 
@@ -291,7 +321,7 @@ section {
 
 /* --- Botão Voltar --- */
 .back-nav {
-   background: url('../imgs/navbar_bg.webp') no-repeat center center/cover;
+   background: url('../imgs/logos-bg/navbar_bg.webp') no-repeat center center/cover;
    display: flex;
    flex-direction: column;
 
@@ -301,7 +331,7 @@ section {
       width: 100%;
       height: auto;
       padding: 20px;
-      color: var(--bg);
+      color: var(--text-light);
       text-shadow: 0px 2px 10px #222;
    }
 
@@ -408,6 +438,11 @@ footer {
                   background-color: rgba(255, 255, 255, 0.1);
                }
             }
+
+            /* Esconder botão dark mode dentro do menu mobile */
+            button.dark-mode-toggle {
+               display: none !important;
+            }
          }
       }
    }
@@ -415,6 +450,67 @@ footer {
    .back-nav {
       h1 {
          font-size: 1.2rem;
+      }
+   }
+}
+
+/* Responsividade para dispositivos em modo horizontal */
+@media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+   #main-nav {
+      padding: 0 2%;
+
+      .logo-area {
+         .logo-img {
+            height: 35px;
+         }
+
+         .logo-text {
+            font-size: 0.8rem;
+         }
+      }
+
+      .nav-links {
+         li a {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+         }
+
+         li button {
+            padding: 6px;
+            font-size: 1rem;
+         }
+      }
+   }
+
+   .back-nav {
+      padding: 10px 2%;
+
+      h1 {
+         font-size: 1.1rem;
+      }
+
+      .btn-box {
+         padding: 5px 15px;
+
+         .btn-voltar {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+         }
+      }
+   }
+
+   .hero {
+      .hero-overlay h1 {
+         font-size: 2.5rem;
+      }
+
+      .hero-overlay p {
+         font-size: 1.1rem;
+      }
+
+      .btn-start {
+         padding: 12px 24px;
+         font-size: 1rem;
       }
    }
 }

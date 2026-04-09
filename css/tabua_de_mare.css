@@ -192,3 +192,28 @@ input[type="date"]:focus {
    color: var(--text-muted);
    font-size: 14px;
 }
+
+/* Responsividade para dispositivos em modo horizontal */
+@media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+   .main-content .container {
+      max-width: 95%;
+      padding: 1rem;
+   }
+
+   header h1 {
+      font-size: 20px;
+   }
+
+   header p {
+      font-size: 12px;
+   }
+
+   .date-nav {
+      gap: 8px;
+   }
+
+   .date-nav button {
+      padding: 8px 12px;
+      font-size: 12px;
+   }
+}

@@ -63,3 +63,23 @@
       }
    }
 }
+
+/* Responsividade para dispositivos em modo horizontal */
+@media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+   .info-section {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+
+      h2 {
+         font-size: 24px;
+      }
+
+      .info-image {
+         order: 2;
+      }
+
+      .info-text {
+         order: 1;
+      }
+   }
+}

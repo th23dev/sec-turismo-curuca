@@ -49,3 +49,23 @@
       }
    }
 }
+
+/* Responsividade para dispositivos em modo horizontal */
+@media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+   #contact-section {
+      gap: 15px;
+      padding: 20px 10px;
+
+      .contact {
+         width: 95%;
+         padding: 15px;
+         font-size: 18px;
+         gap: 15px;
+
+         i {
+            width: 35px;
+            height: 35px;
+         }
+      }
+   }
+}

@@ -30,14 +30,14 @@
 }
 
 #videos {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/cat.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/cat.webp') no-repeat center center/cover;
    font-size: 40px;
    grid-column: span 3 / span 3;
    grid-row: span 3 / span 3;
 }
 
 #hoteis {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/hoteis.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/hoteis.webp') no-repeat center center/cover;
    grid-column: span 2 / span 2;
    grid-row: span 2 / span 2;
    grid-column-start: 4;
@@ -63,7 +63,7 @@
 }
 
 #mapa-turistico {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/mapa_turistico_bg.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/mapa_turistico_bg.webp') no-repeat center center/cover;
    grid-column: span 2 / span 2;
    grid-row: span 2 / span 2;
    grid-column-start: 1;
@@ -71,7 +71,7 @@
 }
 
 #barraca-pescador {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/barraca_do_pescador.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/barraca_do_pescador.webp') no-repeat center center/cover;
    grid-column: span 2 / span 2;
    grid-row: span 2 / span 2;
    grid-column-start: 4;
@@ -109,27 +109,27 @@
 }
 
 #igarapes {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/igarapes.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/igarapes.webp') no-repeat center center/cover;
    grid-row: span 5 / span 5;
    grid-column-start: 3;
    grid-row-start: 4;
 }
 
 #tabua-de-mare {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/tabua_de_mare.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/tabua_de_mare.webp') no-repeat center center/cover;
    grid-row: span 4 / span 4;
    grid-column-start: 4;
    grid-row-start: 5;
 }
 #cat {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/cat.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/cat.webp') no-repeat center center/cover;
    grid-row: span 4 / span 4;
    grid-column-start: 5;
    grid-row-start: 5;
 }
 
 #praias {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/praias.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/praias.webp') no-repeat center center/cover;
    grid-column: span 2 / span 2;
    grid-row: span 3 / span 3;
    grid-column-start: 1;
@@ -137,7 +137,7 @@
 }
 
 #contatos-uteis {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/contatos_uteis.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/contatos_uteis.webp') no-repeat center center/cover;
    grid-row: span 3 / span 3;
    grid-column-start: 6;
    grid-row-start: 6;
@@ -161,6 +161,28 @@
          padding: 10px !important;
          grid-column: span 2 / span 2 !important;
          grid-row: span 6 / span 6 !important;
+      }
+   }
+}
+
+/* Responsividade para dispositivos em modo horizontal */
+@media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+   .main-container {
+      .parent {
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: repeat(6, 1fr);
+         gap: 15px;
+         padding: 20px;
+      }
+
+      .parent a {
+         font-size: 14px !important;
+         padding: 8px !important;
+         min-height: 60px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
       }
    }
 }
