@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Turismo Curuçá - Portal</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/conexao.css">
+</head>
+
+<body>
+
+   <nav class="back-nav">
+      <div class="text-box">
+         <h1>Praias</h1>
+      </div>
+      <div class="btn-box">
+         <a href="menu.html" class="btn-voltar">
+            <i class="fas fa-chevron-left"></i> Voltar
+         </a>
+         <a href="../index.html" class="btn-voltar">
+            Início <i class="fas fa-house"></i>
+         </a>
+      </div>
+   </nav>
+
+   <main>
+      <!-- Catálogo de prais -->
+      <section class="catalogo">
+         <div class="cards-grid">
+            <div class="card" onclick="openModal('arrombado')">
+               <img src="../imgs/praias/arrombado.webp" alt="Praia do Arrombado">
+               <h3>Praia do Arrombado</h3>
+            </div>
+
+            <div class="card" onclick="openModal('guara')">
+               <img src="../imgs/praias/guara.webp" alt="Praia do Guará">
+               <h3>Praia do Guará</h3>
+            </div>
+
+            <div class="card" onclick="openModal('japerica')">
+               <img src="../imgs/praias/japerica.webp" alt="Praia do Japerica">
+               <h3>Praia do Japerica</h3>
+            </div>
+
+            <div class="card" onclick="openModal('paxicu')">
+               <img src="../imgs/praias/paxicu.webp" alt="Praia do Paxicú">
+               <h3>Praia do Paxicú</h3>
+            </div>
+
+            <div class="card" onclick="openModal('romana')">
+               <img src="../imgs/praias/romana.webp" alt="Praia da Romana">
+               <h3>Praia da Romana</h3>
+            </div>
+      </section>
+
+      <!-- Modais -->
+      <div id="modal-arrombado" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('arrombado')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/praias/arrombado.webp');"></div>
+            <div class="text-box">
+               <h2>Praia do Arrombado</h2>
+               <p>Habitada por pescadores, com uma extensão aproximada de 2 km.
+
+                  Realiza-se a travessia em cerca de 1h10m, saindo da Orla do Abade.
+
+                  Não possui infraestrutura de hospedagem, alimentos e bebidas.</p>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-guara" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('guara')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/praias/guara.webp');"></div>
+            <div class="text-box">
+               <h2>Praia do Guará</h2>
+               <p>A Praia do Guará está localizada no litoral Curuçaense.
+                  Realiza-se a travessia em cerca de 1h45m, saindo da Orla do abade.
+                  Não possui infraestrutura de hospedagem, alimentos e bebidas.</p>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-japerica" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('japerica')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/praias/japerica.webp');"></div>
+            <div class="text-box">
+               <h2>Praia do Japerica</h2>
+               <p>A Praia do Japerica possui uma extensão de aproximadamente 1 km.
+                  Realiza-se a travessia em cerca de 30m, saindo da Orla do abade.
+                  Não possui infraestrutura de hospedagem, alimentos e bebidas.
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-paxicu" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('paxicu')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/praias/paxicu.webp');"></div>
+            <div class="text-box">
+               <h2>Praia do Paxicú</h2>
+               <p>A Praia possui uma extensão de aproximadamente 2 km, com faixa de areia fina e vegetação litorânea.
+                  Realiza-se a travessia em cerca de 1h, saindo da Orla do abade.
+                  Não possui infraestrutura de hospedagem, alimentos e bebidas. </p>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-romana" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('romana')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/praias/romana.webp');"></div>
+            <div class="text-box">
+               <h2>Praia da Romana</h2>
+               <p>Habitada por pescadores, com uma extensão aproximada de 11 km.
+                  Realiza-se a travessia em cerca de 1h30m, saindo da Orla do Abade.
+                  Não possui infraestrutura de hospedagem, alimentos e bebidas.</p>
+            </div>
+         </div>
+      </div>
+      
+   </main>
+
+   <footer>
+      <div class="footer-logos">
+         <img src="../imgs/logo-sebrae.webp" alt="sebrae">
+         <img src="../imgs/logo-cidade-empreendedora.webp" alt="cidade empreendedora">
+         <img src="../imgs/logo-sec-turismo.webp" alt="secretaria de turismo Curuçá">
+         <img src="../imgs/logo-prefeitura-curuca.webp" alt="prefeitura de Curuçá">
+      </div>
+      <div class="social-links">
+         <p>Siga-nos: @turismocuruca.oficial</p>
+      </div>
+      <hr style="border: 0.5px solid #444; margin-bottom: 20px;">
+      <p>&copy; 2026 - Prefeitura Municipal de Curuçá - Todos os direitos reservados.</p>
+      <p>Desenvolvedor - Th23dev - @th23_dev</p>
+   </footer>
+
+</body>
+<script src="../js/catalogo.js"></script>
+
+</html>

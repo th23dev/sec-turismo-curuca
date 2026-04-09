@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Tábua de Marés — Curuçá, PA</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/conexao.css">
+</head>
+
+<body>
+
+   <nav class="back-nav">
+      <div class="text-box">
+         <h1>Praias</h1>
+      </div>
+      <div class="btn-box">
+         <a href="menu.html" class="btn-voltar">
+            <i class="fas fa-chevron-left"></i> Voltar
+         </a>
+         <a href="../index.html" class="btn-voltar">
+            Início <i class="fas fa-house"></i>
+         </a>
+      </div>
+   </nav>
+
+   <main class="main-content">
+      <section>
+         <div class="container">
+            <header>
+               <h1>Tábua de Marés — Curuçá, PA</h1>
+               <p>Coordenadas: 0.72°S, 47.85°W · Maré semidiurna · Fuso: Brasília (UTC-3)</p>
+            </header>
+
+            <div class="date-nav">
+               <button class="btn" id="btn-prev">← Anterior</button>
+               <input type="date" id="date-input" />
+               <button class="btn" id="btn-next">Próximo →</button>
+               <button class="btn" id="btn-hoje">Hoje</button>
+            </div>
+
+            <div id="stats-grid" class="stats-grid"></div>
+
+            <div class="chart-container">
+               <div class="chart-label">Altura da maré ao longo do dia (metros)</div>
+               <div id="chart-area"></div>
+            </div>
+
+            <table class="tide-table">
+               <thead>
+                  <tr>
+                     <th>Tipo</th>
+                     <th>Horário</th>
+                     <th>Altura (m)</th>
+                     <th>Coeficiente</th>
+                  </tr>
+               </thead>
+               <tbody id="tide-tbody"></tbody>
+            </table>
+
+            <p class="source">
+               Modelo harmônico de marés semidiurnas · Open-Meteo Marine API (wave_height) ·
+               Curuçá, PA (0.72°S, 47.85°W)
+            </p>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div class="footer-logos">
+         <img src="../imgs/logo-sebrae.webp" alt="sebrae">
+         <img src="../imgs/logo-cidade-empreendedora.webp" alt="cidade empreendedora">
+         <img src="../imgs/logo-sec-turismo.webp" alt="secretaria de turismo Curuçá">
+         <img src="../imgs/logo-prefeitura-curuca.webp" alt="prefeitura de Curuçá">
+      </div>
+      <div class="social-links">
+         <p>Siga-nos: @turismocuruca.oficial</p>
+      </div>
+      <hr style="border: 0.5px solid #444; margin-bottom: 20px;">
+      <p>&copy; 2026 - Prefeitura Municipal de Curuçá - Todos os direitos reservados.</p>
+      <p>Desenvolvedor - Th23dev - @th23_dev</p>
+   </footer>
+</body>
+<script src="../js/api_tabua_de_mare.js"></script>
+
+</html>

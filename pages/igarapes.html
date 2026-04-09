@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Turismo Curuçá - Portal</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/conexao.css">
+</head>
+
+<body>
+
+   <nav class="back-nav">
+      <div class="text-box">
+         <h1>Igarapés</h1>
+      </div>
+      <div class="btn-box">
+         <a href="menu.html" class="btn-voltar">
+            <i class="fas fa-chevron-left"></i> Voltar
+         </a>
+         <a href="../index.html" class="btn-voltar">
+            Início <i class="fas fa-house"></i>
+         </a>
+      </div>
+   </nav>
+
+   <main>
+      <!-- Catálogo de igarapes -->
+      <section class="catalogo">
+         <div class="cards-grid">
+            <div class="card" onclick="openModal('aguas-verdes')">
+               <img src="../imgs/igarapes/aguas-verdes.webp" alt="Águas Verdes">
+               <h3>Águas Verdes</h3>
+            </div>
+
+            <div class="card" onclick="openModal('coca-cola')">
+               <img src="../imgs/igarapes/coca-cola.webp" alt="Coca-Cola">
+               <h3>Coca-Cola</h3>
+            </div>
+
+            <div class="card" onclick="openModal('manga')">
+               <img src="../imgs/igarapes/manga.webp" alt="Rio Manga">
+               <h3>Rio Manga</h3>
+            </div>
+
+            <div class="card" onclick="openModal('para-pra-ver')">
+               <img src="../imgs/igarapes/para-pra-ver.webp" alt="Para pra ver">
+               <h3>Para pra ver</h3>
+            </div>
+
+            <div class="card" onclick="openModal('quem-te-dera')">
+               <img src="../imgs/igarapes/quem-te-dera.webp" alt="Quem te dera">
+               <h3>Quem te dera</h3>
+            </div>
+
+            <div class="card" onclick="openModal('riacho-doce')">
+               <img src="../imgs/igarapes/riacho-doce.webp" alt="Riacho Doce">
+               <h3>Riacho Doce</h3>
+            </div>
+      </section>
+
+      <!-- Modais -->
+      <div id="modal-aguas-verdes" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('aguas-verdes')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/igarapes/aguas-verdes.webp');"></div>
+            <div class="text-box">
+               <h2>Águas Verdes</h2>
+               <p>Balneário Águas Verdes, situado na comunidade do Simôa, 30 km do centro de Curuçá. A taxa para entrada
+                  é
+                  de R$ 10,00 por pessoa. Proibido a entrada com bebidas e som automotivo.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fas fa-phone"></i>(91) 99208-4272</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-coca-cola" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('coca-cola')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/igarapes/coca-cola.webp');"></div>
+            <div class="text-box">
+               <h2>Coca-Cola</h2>
+               <p>Balneário Coca Cola, situado na comunidade do km 58, fica cerca de 5 km do centro de Curuçá.
+                  O igarapé de água avermelhada é muito visitado nos finais de semana.
+                  Balneário aberto ao público.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fas fa-phone"></i>Número Indisponível</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-manga" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('manga')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/igarapes/manga.webp');"></div>
+            <div class="text-box">
+               <h2>Rio Manga</h2>
+               <p>O Balneário do Manga tem sua água escura e fica localizado no Bairro Rodoviário, há 1 km do centro de
+                  Curuçá.
+                  A taxa para entrada é de R$ 5,00 por pessoa.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fas fa-phone"></i> (91) 98395-2638</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-para-pra-ver" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('para-pra-ver')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/igarapes/para-pra-ver.webp');"></div>
+            <div class="text-box">
+               <h2>Para pra ver</h2>
+               <p>Balneário Parar pra ver, fica situado no Bairro Rodoviário, aproximadamente
+                  1 km do centro de Curuçá.
+                  A taxa para entrada é de R$ 5,00 por pessoa. </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fas fa-phone"></i>(91) 99137-1979</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-quem-te-dera" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('quem-te-dera')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/igarapes/quem-te-dera.webp');"></div>
+            <div class="text-box">
+               <h2>Quem te dera</h2>
+               <p>O Balneário fica situado na comunidade de Pedras Grandes, há 5 km do centro de Curuçá.
+                  Precisa fazer a travessia de barco para chegar ate o igarapé.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fas fa-phone"></i>(91) 99201-4475</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-riacho-doce" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('riacho-doce')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/igarapes/riacho-doce.webp');"></div>
+            <div class="text-box">
+               <h2>Riacho Doce</h2>
+               <p>Balneário Riacho Doce, situado na estrada da Vila de Murajá, aproximadamente 10 km do centro de
+                  Curuçá.
+               </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fas fa-phone"></i>(91) 99627-1171</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <footer>
+      <div class="footer-logos">
+         <img src="../imgs/logo-sebrae.webp" alt="sebrae">
+         <img src="../imgs/logo-cidade-empreendedora.webp" alt="cidade empreendedora">
+         <img src="../imgs/logo-sec-turismo.webp" alt="secretaria de turismo Curuçá">
+         <img src="../imgs/logo-prefeitura-curuca.webp" alt="prefeitura de Curuçá">
+      </div>
+      <div class="social-links">
+         <p>Siga-nos: @turismocuruca.oficial</p>
+      </div>
+      <hr style="border: 0.5px solid #444; margin-bottom: 20px;">
+      <p>&copy; 2026 - Prefeitura Municipal de Curuçá - Todos os direitos reservados.</p>
+      <p>Desenvolvedor - Th23dev - @th23_dev</p>
+   </footer>
+
+</body>
+<script src="../js/catalogo.js"></script>
+
+</html>

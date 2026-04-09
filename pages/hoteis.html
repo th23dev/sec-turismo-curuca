@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Turismo Curuçá - Portal</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/conexao.css">
+</head>
+
+<body>
+
+   <nav class="back-nav">
+      <div class="text-box">
+         <h1>Hotéis Locais</h1>
+      </div>
+      <div class="btn-box">
+         <a href="menu.html" class="btn-voltar">
+            <i class="fas fa-chevron-left"></i> Voltar
+         </a>
+         <a href="../index.html" class="btn-voltar">
+            Início <i class="fas fa-house"></i>
+         </a>
+      </div>
+   </nav>
+
+   <main>
+      <!-- Catálogo de prais -->
+      <section class="catalogo">
+         <div class="cards-grid">
+            <div class="card" onclick="openModal('espadarte')">
+               <img src="../imgs/hoteis/espadarte.webp" alt="Hotel Espadarte">
+               <h3>Hotel Espadarte</h3>
+            </div>
+
+            <div class="card" onclick="openModal('leao-de-juda')">
+               <img src="../imgs/hoteis/leao-de-juda.webp" alt="Eco Hotel Leão de Judá">
+               <h3>Eco Hotel Leão de Judá</h3>
+            </div>
+
+            <div class="card" onclick="openModal('gloria')">
+               <img src="../imgs/hoteis/gloria.webp" alt="Hotel Glória">
+               <h3>Hotel Glória</h3>
+            </div>
+
+            <div class="card" onclick="openModal('flor-de-lotus')">
+               <img src="../imgs/hoteis/flor-de-lotus.webp" alt="Hotel Flor de Lótus">
+               <h3>Hotel Flor de Lótus</h3>
+            </div>
+
+            <div class="card" onclick="openModal('nathalia')">
+               <img src="../imgs/hoteis/nathalia.webp" alt="Hotel Nathália">
+               <h3>Hotel Nathália</h3>
+            </div>
+
+            <div class="card" onclick="openModal('tubarao')">
+               <img src="../imgs/hoteis/tubarao.webp" alt="Pousada do Tubarão">
+               <h3>Pousada do Tubarão</h3>
+            </div>
+
+            <div class="card" onclick="openModal('solar-do-mangue')">
+               <img src="../imgs/hoteis/solar-do-mangue.webp" alt="Hotel Solar do Mangue">
+               <h3>Hotel Solar do Mangue</h3>
+            </div>
+
+            <div class="card" onclick="openModal('por-do-sol')">
+               <img src="../imgs/hoteis/por-do-sol.webp" alt="Pousada Por do Sol">
+               <h3>Pousada Por do Sol</h3>
+            </div>
+
+            <div class="card" onclick="openModal('kabana-do-marujo')">
+               <img src="../imgs/hoteis/kabana-do-marujo.webp" alt="Pousada Kabana do Marujo">
+               <h3>Pousada Kabana do Marujo</h3>
+            </div>
+
+            <div class="card" onclick="openModal('passaro-impar')">
+               <img src="../imgs/hoteis/passaro-impar.webp" alt="Sítio Pássaro Ímpar">
+               <h3>Sítio Pássaro Ímpar</h3>
+            </div>
+
+            <div class="card" onclick="openModal('hotel-curuca')">
+               <img src="../imgs/hoteis/hotel-curuca.webp" alt="Hotel Curuçá">
+               <h3>Hotel Curuçá</h3>
+            </div>
+      </section>
+
+      <!-- Modais -->
+      <div id="modal-espadarte" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('espadarte')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/espadarte.webp');"></div>
+            <div class="text-box">
+               <h2>Hotel Espadarte</h2>
+               <p>Localizado na Av. Paes de Carvalho, s/n, Centro, frente do terminal rodoviário.
+                  Um ambiente familiar e agradável. </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp"></i>(91) 99144-0551</span>
+                  <a class="tag insta" href="https://www.instagram.com/hotel.espadarte1" target="_blank">
+                     <i class="fab fa-instagram"></i>@hotel.espadarte1
+                  </a>
+                  <span class="tag"><i class="fas fa-utensils"></i>Restaurante</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-leao-de-juda" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('leao-de-juda')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/leao-de-juda.webp');"></div>
+            <div class="text-box">
+               <h2>Eco Hotel Leão de Judá</h2>
+               <p>Eles oferecem uma variedade de pacotes para você aproveitar uma maravilhosa gastronomia em um ambiente
+                  familiar de frente para o mar. Está localizado na comunidade de boa Vista do Muriá, há 7 km do centro
+                  de Curuçá.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 98217-6565</span>
+                  <a class="tag insta" href="https://www.instagram.com/ecohotelleaodejuda" target="_blank">
+                     <i class="fab fa-instagram"></i>@ecohotelleaodejuda
+                  </a>
+                  <span class="tag"><i class="fas fa-utensils"></i>Restaurante</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-gloria" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('gloria')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/gloria.webp');"></div>
+            <div class="text-box">
+               <h2>Hotel Glória</h2>
+               <p>Localizado na travessa Duque de Caxias, Nº 51, centro da cidade.
+                  Um ambiente familiar e agradável. </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 99223-9552</span>
+                  <a class="tag insta" href="https://www.instagram.com/hotel_gloria_2024" target="_blank">
+                     <i class="fab fa-instagram"></i>@hotel_gloria_2024
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-flor-de-lotus" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('flor-de-lotus')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/flor-de-lotus.webp');"></div>
+            <div class="text-box">
+               <h2>Hotel Flor de Lótus</h2>
+               <p>Localizado na travessa Marques de Herval, Centro, ao lado do hospital Municipal.
+                  Um ambiente familiar e agradável.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 99197-7209</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-nathalia" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('nathalia')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/nathalia.webp');"></div>
+            <div class="text-box">
+               <h2>Hotel Nathália</h2>
+               <p>Localizado na travessa Independente, s/n, centro Abade.
+                  Um ambiente familiar e agradável.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 99271-2740</span>
+                  <a class="tag insta" href="https://www.instagram.com/hotelnathalia" target="_blank">
+                     <i class="fab fa-instagram"></i>@hotelnathalia
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-tubarao" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('tubarao')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/tubarao.webp');"></div>
+            <div class="text-box">
+               <h2>Pousada do Tubarão</h2>
+               <p>Localizado na Vila do Coqueiro, há 23 km do centro de Curuçá.
+                  Contato direto com a natureza e uma vista apaixonante.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 98822-7275</span>
+                  <a class="tag insta" href="https://www.instagram.com/peixariadotubarao" target="_blank">
+                     <i class="fab fa-instagram"></i>@peixariadotubarao
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-solar-do-mangue" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('solar-do-mangue')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/solar-do-mangue.webp');"></div>
+            <div class="text-box">
+               <h2>Hotel Solar do Mangue</h2>
+               <p>Localizado na travessa Saldanha Marinho, s/n, Centro.
+                  Espaço mais charmoso e exclusivo de Curuçá.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 98342-3447</span>
+                  <a class="tag insta" href="https://www.instagram.com/solardomangue" target="_blank">
+                     <i class="fab fa-instagram"></i>@slardomangue
+                  </a>
+                  <span class="tag"><i class="fas fa-utensils"></i>Restaurante</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-por-do-sol" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('por-do-sol')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/por-do-sol.webp');"></div>
+            <div class="text-box">
+               <h2>Pousada Por do Sol</h2>
+               <p>Localizado na travessa Independente, s/n, centro Abade.
+                  Um ambiente familiar e agradável. </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 99839-4791</span>
+                  <a class="tag insta" href="https://www.instagram.com/pousadapordosolabadee" target="_blank">
+                     <i class="fab fa-instagram"></i>@pousadapordosolabadee
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-kabana-do-marujo" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('kabana-do-marujo')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/kabana-do-marujo.webp');"></div>
+            <div class="text-box">
+               <h2>Pousada Kabana do Marujo</h2>
+               <p>Restaurante e Pousada
+                  Kabana do Marujo.
+                  Localizado na Orla da comunidade de Boa Vista do Muriá, fica 7 km do centro de Curuçá.
+                  Cardápio variado.</p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 91 99370-2142</span>
+                  <a class="tag insta" href="https://www.instagram.com/kabanadomarujo" target="_blank">
+                     <i class="fab fa-instagram"></i>@kabanadomarujo
+                  </a>
+                  <span class="tag"><i class="fas fa-utensils"></i>Restaurante</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-passaro-impar" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('passaro-impar')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/passaro-impar.webp');"></div>
+            <div class="text-box">
+               <h2>Sítio Pássaro Ímpar</h2>
+               <p>Localizado na Comunidade do Valério, Ramal do Piquiateua, Nº07.
+                  Refúgio de paz e conexão com a natureza. </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 98485-9829</span>
+                  <a class="tag insta" href="https://www.instagram.com/sitiopassaroimpar" target="_blank">
+                     <i class="fab fa-instagram"></i>@sitiopassaroimpar
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="modal-hotel-curuca" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('hotel-curuca')">&times;</span>
+            <div class="img" style="background-image: url('../imgs/hoteis/hotel-curuca.webp');"></div>
+            <div class="text-box">
+               <h2>Hotel Curuçá</h2>
+               <p>Localizado na Rua do Rosário, Nº 07 - Centro, frente da orla da cidade.
+                  Um ambiente familiar e agradável. </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fab fa-whatsapp phone"></i>(91) 98987-9408</span>
+                  <a class="tag insta" href="https://www.instagram.com/hotelcuruca" target="_blank">
+                     <i class="fab fa-instagram"></i>@hotelcuruca
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <footer>
+      <div class="footer-logos">
+         <img src="../imgs/logo-sebrae.webp" alt="sebrae">
+         <img src="../imgs/logo-cidade-empreendedora.webp" alt="cidade empreendedora">
+         <img src="../imgs/logo-sec-turismo.webp" alt="secretaria de turismo Curuçá">
+         <img src="../imgs/logo-prefeitura-curuca.webp" alt="prefeitura de Curuçá">
+      </div>
+      <div class="social-links">
+         <p>Siga-nos: @turismocuruca.oficial</p>
+      </div>
+      <hr style="border: 0.5px solid #444; margin-bottom: 20px;">
+      <p>&copy; 2026 - Prefeitura Municipal de Curuçá - Todos os direitos reservados.</p>
+      <p>Desenvolvedor - Th23dev - @th23_dev</p>
+   </footer>
+
+</body>
+<script src="../js/catalogo.js"></script>
+
+</html>
