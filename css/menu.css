@@ -54,6 +54,11 @@
       width: 50px;
       font-size: 30px;
       text-align: center;
+      filter: grayscale(100) brightness(100);
+   }
+
+   img{
+      width: 60px;
    }
 }
 
@@ -76,19 +81,31 @@
 #SEBRAE {
    background-color: var(--primary-color);
    grid-column-start: 6;
-   grid-row-start: 3;
+   grid-row-start: 4;
 }
 
 #MTUR {
-   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+   background: linear-gradient(45deg, #002776 0%, #004C99 25%, #0066CC 50%, #3399FF 75%, #66CCFF 100%);
    grid-column-start: 6;
-   grid-row-start: 2;
+   grid-row-start: 3;
 }
 
 #SEMTUR {
    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
    grid-column-start: 6;
    grid-row-start: 1;
+}
+
+#PREFEITURA {
+   background: #0d7fb8;
+   grid-column-start: 6;
+   grid-row-start: 2;
+}
+
+#EMBRATUR {
+   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+   grid-column-start: 6;
+   grid-row-start: 5;
 }
 
 #igarapes {
@@ -106,9 +123,9 @@
 }
 #cat {
    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/cat.webp') no-repeat center center/cover;
-   grid-row: span 5 / span 5;
-   grid-column-start: 6;
-   grid-row-start: 4;
+   grid-row: span 4 / span 4;
+   grid-column-start: 5;
+   grid-row-start: 5;
 }
 
 #praias {
@@ -121,9 +138,9 @@
 
 #contatos-uteis {
    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/contatos_uteis.webp') no-repeat center center/cover;
-   grid-row: span 4 / span 4;
-   grid-column-start: 5;
-   grid-row-start: 5;
+   grid-row: span 3 / span 3;
+   grid-column-start: 6;
+   grid-row-start: 6;
 }
 
 @media (max-width: 768px) {

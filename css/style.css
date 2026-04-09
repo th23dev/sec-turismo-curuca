@@ -26,10 +26,11 @@ body {
    color: var(--text-color);
 }
 
-section{
+section {
    padding: 40px 5%;
    background-color: var(--bg);
 }
+
 /* --- Navbar --- */
 #main-nav {
    background: var(--primary-color);
@@ -147,8 +148,8 @@ section{
 
 /* --- Hero Section --- */
 .hero {
+   position: relative;
    height: 100vh;
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../imgs/cat.webp') no-repeat center center/cover;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -156,41 +157,141 @@ section{
    text-align: center;
    color: var(--text-light);
    padding: 20px;
+   overflow: hidden;
+}
 
-   h1 {
-      font-size: clamp(2rem, 4vw, 4rem);
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      text-shadow: var(--shadow);
+.hero-bg {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   opacity: 0;
+   animation: fadeInOut 36s infinite;
+}
+
+.hero-bg-1 {
+   background-image: url('../imgs/cat.webp');
+   animation-delay: 0s;
+   animation: instantFadeInOut 36s infinite;
+}
+
+.hero-bg-2 {
+   background-image: url('../imgs/praias.webp');
+   animation-delay: 6s;
+}
+
+.hero-bg-3 {
+   background-image: url('../imgs/igarapes.webp');
+   animation-delay: 12s;
+}
+
+.hero-bg-4 {
+   background-image: url('../imgs/hoteis.webp');
+   animation-delay: 18s;
+}
+
+.hero-bg-5 {
+   background-image: url('../imgs/barraca_do_pescador.webp');
+   animation-delay: 24s;
+}
+
+.hero-bg-6 {
+   background-image: url('../imgs/tabua_de_mare.webp');
+   animation-delay: 30s;
+}
+
+.hero-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+   z-index: 1;
+}
+
+@keyframes fadeInOut {
+   0% {
+      opacity: 0;
    }
 
-   p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
+   10% {
+      opacity: 1;
    }
 
-   .btn-start {
-      background-color: var(--primary-color);
-      color: var(--text-light);
-      padding: 15px 50px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.3s, background 0.3s;
-
-      &:hover {
-         background-color: var(--dark-color);
-         transform: scale(1.05);
-      }
+   20% {
+      opacity: 1;
    }
 
+   30% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes instantFadeInOut {
+   0% {
+      opacity: 1;
+   }
+
+   20% {
+      opacity: 1;
+   }
+
+   30% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+.hero h1 {
+   position: relative;
+   z-index: 2;
+   font-size: clamp(2rem, 4vw, 4rem);
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   text-shadow: var(--shadow);
+}
+
+.hero p {
+   position: relative;
+   z-index: 2;
+   font-size: 1.2rem;
+   margin-bottom: 30px;
+}
+
+.btn-start {
+   position: relative;
+   z-index: 2;
+   background-color: var(--primary-color);
+   color: var(--text-light);
+   padding: 15px 50px;
+   border: none;
+   border-radius: 50px;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-decoration: none;
+   transition: transform 0.3s, background 0.3s;
+
+   &:hover {
+      background-color: var(--dark-color);
+      transform: scale(1.05);
+   }
 }
 
 /* --- Botão Voltar --- */
 .back-nav {
-   background:url('../imgs/navbar_bg.webp') no-repeat center center/cover;
+   background: url('../imgs/navbar_bg.webp') no-repeat center center/cover;
    display: flex;
    flex-direction: column;
 

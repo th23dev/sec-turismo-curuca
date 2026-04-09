@@ -46,7 +46,7 @@
                
                .video-card {
                   background: var(--secondary-bg);
-                  border-radius: 15px;
+                  border-radius: 10px;
                   overflow: hidden;
                   box-shadow: var(--shadow);
                   transition: transform 0.3s ease;
