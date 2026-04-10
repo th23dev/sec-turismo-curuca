@@ -96,6 +96,21 @@
       background-position: center;
    }
 
+   .carousel-video {
+      min-width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+   }
+
+   .carousel-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
    .carousel-btn {
       position: absolute;
       top: 50%;
@@ -253,6 +268,8 @@
       width: 100%;
       min-height: 200px;
       position: relative;
+      border-radius: 10px;
+      overflow: hidden;
    }
 
    .carousel-image {

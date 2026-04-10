@@ -58,6 +58,11 @@
                <img src="../imgs/igarapes/riacho-doce.webp" alt="Riacho Doce">
                <h3>Riacho Doce</h3>
             </div>
+
+            <div class="card" onclick="openModal('lagoa-azul')">
+               <img src="../imgs/igarapes/lagoa-azul.webp" alt="Lagoa Azul">
+               <h3>Lagoa Azul</h3>
+            </div>
       </section>
 
       <!-- Modais -->
@@ -66,7 +71,8 @@
             <span class="close" onclick="closeModal('aguas-verdes')">&times;</span>
             <div class="image-carousel">
                <div class="carousel-images">
-                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/aguas-verdes.webp');"></div>
+                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/aguas-verdes.webp');">
+                  </div>
                </div>
                <button class="carousel-btn prev" onclick="prevImage('aguas-verdes')">&#10094;</button>
                <button class="carousel-btn next" onclick="nextImage('aguas-verdes')">&#10095;</button>
@@ -90,10 +96,14 @@
             <span class="close" onclick="closeModal('coca-cola')">&times;</span>
             <div class="image-carousel">
                <div class="carousel-images">
-                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/coca-cola/coca-cola.webp');"></div>
-                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/coca-cola/coca-cola1.webp');"></div>
-                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/coca-cola/coca-cola2.webp');"></div>
-                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/coca-cola/coca-cola3.webp');"></div>
+                  <div class="carousel-image"
+                     style="background-image: url('../imgs/igarapes/coca-cola/coca-cola.webp');"></div>
+                  <div class="carousel-image"
+                     style="background-image: url('../imgs/igarapes/coca-cola/coca-cola1.webp');"></div>
+                  <div class="carousel-image"
+                     style="background-image: url('../imgs/igarapes/coca-cola/coca-cola2.webp');"></div>
+                  <div class="carousel-image"
+                     style="background-image: url('../imgs/igarapes/coca-cola/coca-cola3.webp');"></div>
                </div>
                <button class="carousel-btn prev" onclick="prevImage('coca-cola')">&#10094;</button>
                <button class="carousel-btn next" onclick="nextImage('coca-cola')">&#10095;</button>
@@ -131,6 +141,7 @@
                   A taxa para entrada é de R$ 5,00 por pessoa.</p>
                <div class="info-tags">
                   <span class="tag"><i class="fas fa-phone"></i> (91) 98395-2638</span>
+                  <span class="tag"><i class="fas fa-money-bill"></i>Entrada Paga</span>
                </div>
             </div>
          </div>
@@ -141,7 +152,8 @@
             <span class="close" onclick="closeModal('para-pra-ver')">&times;</span>
             <div class="image-carousel">
                <div class="carousel-images">
-                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/para-pra-ver.webp');"></div>
+                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/para-pra-ver.webp');">
+                  </div>
                </div>
                <button class="carousel-btn prev" onclick="prevImage('para-pra-ver')">&#10094;</button>
                <button class="carousel-btn next" onclick="nextImage('para-pra-ver')">&#10095;</button>
@@ -155,6 +167,7 @@
                   A taxa para entrada é de R$ 5,00 por pessoa. </p>
                <div class="info-tags">
                   <span class="tag"><i class="fas fa-phone"></i>(91) 99137-1979</span>
+                  <span class="tag"><i class="fas fa-money-bill"></i>Entrada Paga</span>
                </div>
             </div>
          </div>
@@ -165,7 +178,8 @@
             <span class="close" onclick="closeModal('quem-te-dera')">&times;</span>
             <div class="image-carousel">
                <div class="carousel-images">
-                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/quem-te-dera.webp');"></div>
+                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/quem-te-dera.webp');">
+                  </div>
                </div>
                <button class="carousel-btn prev" onclick="prevImage('quem-te-dera')">&#10094;</button>
                <button class="carousel-btn next" onclick="nextImage('quem-te-dera')">&#10095;</button>
@@ -202,10 +216,37 @@
                </p>
                <div class="info-tags">
                   <span class="tag"><i class="fas fa-phone"></i>(91) 99627-1171</span>
+                  <span class="tag"><i class="fas fa-money-bill"></i>Entrada Paga</span>
                </div>
             </div>
          </div>
       </div>
+
+      <div id="modal-lagoa-azul" class="modal">
+         <div class="modal-box">
+            <span class="close" onclick="closeModal('lagoa-azul')">&times;</span>
+            <div class="image-carousel">
+               <div class="carousel-images">
+                  <div class="carousel-image" style="background-image: url('../imgs/igarapes/lagoa-azul.webp');"></div>
+               </div>
+               <button class="carousel-btn prev" onclick="prevImage('lagoa-azul')">&#10094;</button>
+               <button class="carousel-btn next" onclick="nextImage('lagoa-azul')">&#10095;</button>
+               <div class="carousel-indicators">
+               </div>
+            </div>
+            <div class="text-box">
+               <h2>Lagoa Azul</h2>
+               <p>Balneário Lagoa Azul, situado no Piquiateua, um dos interiores de Curuçá.
+               </p>
+               <div class="info-tags">
+                  <span class="tag"><i class="fas fa-phone"></i>Número Indisponível</span>
+                  <a class="tag insta" href="https://www.instagram.com/_lagoaazuligarape" target="_blank">
+                     <i class="fab fa-instagram"></i>_lagoaazuligarape
+                  </a>
+                  <span class="tag"><i class="fas fa-money-bill"></i>Entrada Paga</span>
+               </div>
+            </div>
+         </div>
    </main>
 
    <footer>

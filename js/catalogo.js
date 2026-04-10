@@ -13,26 +13,30 @@ function openModal(rio) {
 }
 
 function closeModal(rio) {
-   document.getElementById("modal-" + rio).style.display = "none";
+   const modal = document.getElementById("modal-" + rio);
+   // Pausar todos os vídeos no modal antes de fechar
+   const videos = modal.querySelectorAll('video');
+   videos.forEach(video => video.pause());
+   modal.style.display = "none";
 }
 
 function prevImage(modalId) {
    const modal = document.getElementById("modal-" + modalId);
    const carouselImages = modal.querySelector('.carousel-images');
-   const images = carouselImages.querySelectorAll('.carousel-image');
+   const items = carouselImages.querySelectorAll('.carousel-image, .carousel-video');
    const indicators = modal.querySelectorAll('.indicator');
    let currentIndex = Array.from(indicators).findIndex(ind => ind.classList.contains('active'));
-   currentIndex = (currentIndex - 1 + images.length) % images.length;
+   currentIndex = (currentIndex - 1 + items.length) % items.length;
    updateCarousel(modalId, currentIndex);
 }
 
 function nextImage(modalId) {
    const modal = document.getElementById("modal-" + modalId);
    const carouselImages = modal.querySelector('.carousel-images');
-   const images = carouselImages.querySelectorAll('.carousel-image');
+   const items = carouselImages.querySelectorAll('.carousel-image, .carousel-video');
    const indicators = modal.querySelectorAll('.indicator');
    let currentIndex = Array.from(indicators).findIndex(ind => ind.classList.contains('active'));
-   currentIndex = (currentIndex + 1) % images.length;
+   currentIndex = (currentIndex + 1) % items.length;
    updateCarousel(modalId, currentIndex);
 }
 
@@ -46,13 +50,13 @@ function updateCarousel(modalId, index) {
    const prevBtn = modal.querySelector('.carousel-btn.prev');
    const nextBtn = modal.querySelector('.carousel-btn.next');
    const indicatorsContainer = modal.querySelector('.carousel-indicators');
-   const images = carouselImages.querySelectorAll('.carousel-image');
+   const items = carouselImages.querySelectorAll('.carousel-image, .carousel-video');
 
    // Limpar indicadores existentes
    indicatorsContainer.innerHTML = '';
 
    // Criar indicadores dinamicamente
-   images.forEach((_, i) => {
+   items.forEach((_, i) => {
       const indicator = document.createElement('span');
       indicator.classList.add('indicator');
       if (i === index) indicator.classList.add('active');
@@ -62,14 +66,29 @@ function updateCarousel(modalId, index) {
 
    carouselImages.style.transform = `translateX(-${index * 100}%)`;
 
+   // Pausar todos os vídeos
+   items.forEach(item => {
+      if (item.classList.contains('carousel-video')) {
+         const video = item.querySelector('video');
+         if (video) video.pause();
+      }
+   });
+
+   // Tocar o vídeo atual se for vídeo
+   const currentItem = items[index];
+   if (currentItem && currentItem.classList.contains('carousel-video')) {
+      const video = currentItem.querySelector('video');
+      if (video) video.play();
+   }
+
    // Controlar visibilidade das setas e indicadores
-   if (images.length <= 1) {
+   if (items.length <= 1) {
       prevBtn.style.display = 'none';
       nextBtn.style.display = 'none';
       indicatorsContainer.style.display = 'none';
    } else {
       prevBtn.style.display = index === 0 ? 'none' : 'flex';
-      nextBtn.style.display = index === images.length - 1 ? 'none' : 'flex';
+      nextBtn.style.display = index === items.length - 1 ? 'none' : 'flex';
       indicatorsContainer.style.display = 'flex';
    }
 }

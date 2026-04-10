@@ -404,9 +404,10 @@ footer {
       .nav-links {
          position: absolute;
          top: 100%;
-         left: 50%;
-         transform: translateX(-50%);
+         left: 0;
+         right: 0;
          width: 100%;
+         transform: none;
          flex-direction: column;
          background-color: var(--dark-color);
          gap: 0;
@@ -425,13 +426,15 @@ footer {
             width: 100%;
             text-align: center;
 
-            a {
+            a, button {
                display: block;
-               padding: 12px 20px;
+               width: 100%;
+               padding: 12px 0;
                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+               justify-content: center;
 
                &::after {
-                  display: none;
+                  left: 0;
                }
             }
          }
@@ -474,17 +477,15 @@ footer {
    }
 
    .back-nav {
-      padding: 10px 2%;
 
       h1 {
          font-size: 1.1rem;
       }
 
       .btn-box {
-         padding: 5px 15px;
+         padding: 10px;
 
          .btn-voltar {
-            padding: 8px 12px;
             font-size: 0.9rem;
          }
       }
