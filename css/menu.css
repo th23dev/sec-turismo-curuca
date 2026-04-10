@@ -30,7 +30,7 @@
 }
 
 #videos {
-   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/cat.webp') no-repeat center center/cover;
+   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/logos-bg/portal.webp') no-repeat center center/cover;
    font-size: 40px;
    grid-column: span 3 / span 3;
    grid-row: span 3 / span 3;
@@ -169,7 +169,7 @@
 @media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
    .main-container {
       .parent {
-         grid-template-columns: repeat(3, 1fr);
+         grid-template-columns: repeat(2, 1fr);
          grid-template-rows: repeat(6, 1fr);
          gap: 15px;
          padding: 20px;
