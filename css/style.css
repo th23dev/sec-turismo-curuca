@@ -320,7 +320,7 @@ section {
 
 /* --- Botão Voltar --- */
 .back-nav {
-   background: url('../imgs/logos-bg/navbar_bg.webp') no-repeat center center/cover;
+   background: var(--primary-color);
    display: flex;
    flex-direction: column;
 
